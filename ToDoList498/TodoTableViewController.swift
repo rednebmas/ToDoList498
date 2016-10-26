@@ -10,14 +10,28 @@ import UIKit
 
 class TodoTableViewController: UITableViewController {
 
+    private var tasks = TodoTableViewController.getTasks()
+    
+    private static func getTasks() -> [[String:Any]] {
+        let tasks = UserDefaults.standard.array(forKey: "tasks")
+        if tasks == nil {
+            return Array()
+        } else {
+            return tasks! as! [[String : Any]]
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        self.tableView.tableFooterView = UIView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.tasks = TodoTableViewController.getTasks()
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,38 +47,42 @@ class TodoTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return self.tasks.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoCell", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = "Working!"
+        let task = self.tasks[indexPath.row]
+        cell.textLabel?.text = task["title"] as! String
 
         return cell
     }
 
-    /*
+
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
 
-    /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
+            self.tasks.remove(at: indexPath.row)
+            
+            var arr = TodoTableViewController.getTasks()
+            arr.remove(at: indexPath.row)
+            UserDefaults.standard.set(arr, forKey: "tasks")
+            
             tableView.deleteRows(at: [indexPath], with: .fade)
+            
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
-
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
