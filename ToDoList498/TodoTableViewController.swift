@@ -10,7 +10,7 @@ import UIKit
 
 class TodoTableViewController: UITableViewController {
 
-    private var tasks = TodoTableViewController.getTasks()
+    private var tasks = Tasks.shared
     
     private static func getTasks() -> [[String:Any]] {
         let tasks = UserDefaults.standard.array(forKey: "tasks")
@@ -29,8 +29,7 @@ class TodoTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        self.tasks = TodoTableViewController.getTasks()
+
         self.tableView.reloadData()
     }
 
@@ -47,15 +46,15 @@ class TodoTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.tasks.count
+        return self.tasks.list.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoCell", for: indexPath)
 
         // Configure the cell...
-        let task = self.tasks[indexPath.row]
-        cell.textLabel?.text = task["title"] as! String
+        let task = self.tasks.list[indexPath.row]
+        cell.textLabel?.text = task.title as! String
 
         return cell
     }
