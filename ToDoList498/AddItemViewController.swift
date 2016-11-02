@@ -12,11 +12,14 @@ class AddItemViewController: UIViewController {
     
     @IBOutlet weak var taskTitle: UITextField!
     @IBOutlet weak var taskDescription: UITextView!
+    @IBOutlet weak var addButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.addButton.layer.borderWidth = 5.0
+        self.addButton.layer.borderColor = UIColor.green.cgColor
+        self.addButton.layer.cornerRadius = 5.0
     }
 
     override func didReceiveMemoryWarning() {
