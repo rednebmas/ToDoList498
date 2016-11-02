@@ -11,6 +11,7 @@ import UIKit
 class Tasks: NSObject {
     static let shared = Tasks()
     private (set) var list: [Task] = Array()
+    // a file named tasks in the documents directory
     private static let filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] + "tasks"
     
     override init() {
@@ -27,7 +28,6 @@ class Tasks: NSObject {
     
     func add(task: Task) {
         list.append(task)
-        
         NSKeyedArchiver.archiveRootObject(self.list, toFile: Tasks.filePath)
     }
     

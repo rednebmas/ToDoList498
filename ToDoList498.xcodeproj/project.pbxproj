@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		221323081DC9A969002E0AED /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221323071DC9A969002E0AED /* Extensions.swift */; };
 		2270EE241DB9AD83006BC11E /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2270EE231DB9AD83006BC11E /* AddItemViewController.swift */; };
 		9D0B38B11DC984A100CB5412 /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0B38B01DC984A100CB5412 /* Tasks.swift */; };
 		9D0B38B31DC984A800CB5412 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0B38B21DC984A800CB5412 /* Task.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		221323071DC9A969002E0AED /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2270EE231DB9AD83006BC11E /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		9D0B38B01DC984A100CB5412 /* Tasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
 		9D0B38B21DC984A800CB5412 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				9DFB84641DB9A3130016158D /* Info.plist */,
 				2270EE231DB9AD83006BC11E /* AddItemViewController.swift */,
 				9D7738D51DC987F7001C8AC5 /* ToDoTableViewCell.swift */,
+				221323071DC9A969002E0AED /* Extensions.swift */,
 			);
 			path = ToDoList498;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 				9D7738D61DC987F7001C8AC5 /* ToDoTableViewCell.swift in Sources */,
 				9DFB846B1DB9A3F70016158D /* TodoTableViewController.swift in Sources */,
 				2270EE241DB9AD83006BC11E /* AddItemViewController.swift in Sources */,
+				221323081DC9A969002E0AED /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,16 +11,16 @@
         <scene sceneID="yvD-Ts-YYh">
             <objects>
                 <tableViewController id="XQM-md-7SD" customClass="TodoTableViewController" customModule="ToDoList498" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="28" sectionFooterHeight="28" id="efA-n3-TKu">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="efA-n3-TKu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoCell" rowHeight="69" id="Zom-Qs-NVw" customClass="ToDoTableViewCell" customModule="ToDoList498" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="69"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoCell" rowHeight="63" id="Zom-Qs-NVw" customClass="ToDoTableViewCell" customModule="ToDoList498" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="63"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zom-Qs-NVw" id="ys9-7h-4Qb">
-                                    <frame key="frameInset" width="375" height="68.5"/>
+                                    <frame key="frameInset" width="375" height="62.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dba-Tv-CsI">
@@ -36,15 +36,15 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Dba-Tv-CsI" firstAttribute="trailing" secondItem="ys9-7h-4Qb" secondAttribute="trailingMargin" constant="8" id="2Sz-rW-hYH"/>
-                                        <constraint firstItem="3eL-3q-gGS" firstAttribute="leading" secondItem="ys9-7h-4Qb" secondAttribute="leadingMargin" constant="8" id="WzL-yH-OXR"/>
+                                        <constraint firstItem="3eL-3q-gGS" firstAttribute="leading" secondItem="ys9-7h-4Qb" secondAttribute="leadingMargin" constant="9" id="WzL-yH-OXR"/>
                                         <constraint firstItem="Dba-Tv-CsI" firstAttribute="top" secondItem="ys9-7h-4Qb" secondAttribute="topMargin" id="Xu2-P2-rhQ"/>
                                         <constraint firstItem="Dba-Tv-CsI" firstAttribute="leading" secondItem="ys9-7h-4Qb" secondAttribute="leadingMargin" constant="8" id="haJ-6w-AaO"/>
                                         <constraint firstItem="3eL-3q-gGS" firstAttribute="trailing" secondItem="ys9-7h-4Qb" secondAttribute="trailingMargin" constant="8" id="vMF-w1-7ko"/>
-                                        <constraint firstItem="3eL-3q-gGS" firstAttribute="top" secondItem="Dba-Tv-CsI" secondAttribute="bottom" constant="10" id="vfR-3H-2xO"/>
-                                        <constraint firstItem="3eL-3q-gGS" firstAttribute="bottom" secondItem="ys9-7h-4Qb" secondAttribute="bottomMargin" id="y8u-Gx-LsT"/>
+                                        <constraint firstItem="3eL-3q-gGS" firstAttribute="top" secondItem="Dba-Tv-CsI" secondAttribute="bottom" constant="2" id="vfR-3H-2xO"/>
+                                        <constraint firstItem="3eL-3q-gGS" firstAttribute="bottom" secondItem="ys9-7h-4Qb" secondAttribute="bottom" constant="-8" id="y8u-Gx-LsT"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="descriptionLabel" destination="3eL-3q-gGS" id="TK8-bm-rHj"/>
                                     <outlet property="titleLabel" destination="Dba-Tv-CsI" id="wbb-72-Rn7"/>
